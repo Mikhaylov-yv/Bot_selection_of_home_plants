@@ -29,7 +29,7 @@ def color(update, context):
     return COLOR
 
 def get_img_flow(update, context):
-    context.bot.send_photo(chat_id = update.effective_chat.id,  photo=open('zam.jpg', 'rb'),
+    context.bot.send_photo(chat_id = update.effective_chat.id,  photo=open(r'data/img/zam.jpg', 'rb'),
                            caption = 'Ваш лучший выбор: Замиокулькас')
     return ConversationHandler.END
 
