@@ -4,6 +4,7 @@ from telegram import (Poll, ParseMode, KeyboardButton, KeyboardButtonPollType,
                       ReplyKeyboardMarkup, ReplyKeyboardRemove)
 from telegram.ext import (Updater, CommandHandler, PollAnswerHandler, PollHandler, MessageHandler,
                           Filters, ConversationHandler, CallbackQueryHandler)
+from app.reg_data import token
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -45,7 +46,7 @@ def cancel(update, context):
 
 def main():
 
-    updater = Updater('844125015:AAFnsQim1vBur-OTVphYy-MoQzKNAu2N3eI', use_context=True)
+    updater = Updater(token, use_context=True)
 
     dp = updater.dispatcher
     conv_handler = ConversationHandler(
