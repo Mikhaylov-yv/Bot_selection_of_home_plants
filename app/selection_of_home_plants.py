@@ -23,7 +23,7 @@ def start(update, context):
     return UXOD
 
 def color(update, context):
-    reply_keyboard = [["Очень светло", "Средне", "Темноно как в пещере"]]
+    reply_keyboard = [["Очень светло", "Средне", "Темноно"]]
     update.message.reply_text(
         'Как у тебя в комнате с освещением',
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True))
